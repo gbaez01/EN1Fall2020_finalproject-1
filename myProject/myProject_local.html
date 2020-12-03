@@ -5,12 +5,19 @@
 	  <script src="../src/secret.js" charset="utf-8"></script>
 	  <script src="../src/cloud.js" charset="utf-8"></script>
 	  <link rel="stylesheet" href="../src/style.css" />
+		<script>
+		function add (value) {
+		if (value == 'Foward')
+		{
+			document.getElementByID('').value += 'F';
+		}
+		}
 	</head>
 <body>
 
 	<!-- SERVICE DOCK -->
 	<div id="servicedock">
-		<service-airtable id="service_airtable" tablename="myProject"></service-airtable>
+		<service-airtable id="service_airtable" tablename="finalProject"></service-airtable>
 		<service-spike id="service_spike"></service-spike>
 	</div>
 

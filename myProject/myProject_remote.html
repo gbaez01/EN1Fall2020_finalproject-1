@@ -5,6 +5,16 @@
 	  <script src="../src/secret.js" charset="utf-8"></script>
 	  <script src="../src/cloud.js" charset="utf-8"></script>
 	  <link rel="stylesheet" href="../src/style.css" />
+		<script>
+			function add(letter) {
+				document.getElementById('gabe_id').value += letter;
+			}
+			function my_delete() {
+				new_val = document.getElementById('gabe_id').value;
+				new_val = new_val.substr(0,new_val.length-1);
+				document.getElementById('gabe_id').value = new_val;
+			}
+		</script>
 	</head>
 <body>
 
@@ -19,17 +29,23 @@
 	click the different buttons to add instructions to the queue. Use the delete button to remove the last instruction.
 	Once you press run the list of instructions will run as you ordred it. </p>
 	<br>
-	<button cloud_action='update' cloud_name='command'>Forward</button>
-  <button cloud_action='update' cloud_name='command'>Backward</button>
-  <button cloud_action='update' cloud_name='command'>Left Turn</button>
+
+<br><hr><br>
+
+	<button onclick='add("F");'>Forward</button>
+	<button onclick='add("B");'>Backward</button>
+	<button onclick='add("L");'>Turn Left</button>
+
+	<form cloud_form="input">
+	<input id="gabe_id" type=text cloud_action='update' cloud_name='display_text' value=''>
+
+	<button onclick='my_delete();'>Delete</button>
+
 	<br>
-	<button cloud_action='update' cloud_name='command'>Right Turn</button>
-  <button cloud_action='update' cloud_name='command'>Lift Up</button>
-  <button cloud_action='update' cloud_name='command'>Lift Down</button>
-	<br>
-	<button cloud_action='update' cloud_name='command'>Run</button>
-  <button cloud_action='update' cloud_name='command'>Delete</button>
-	<input type=text cloud_action='update' cloud_name='display_text' value='Enter Text'>
+
+	<input type=submit value="Run">
+</form>
+
 	<hr>
 
 	<h2>My Project Quick Links:</h2>
