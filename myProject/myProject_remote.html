@@ -16,8 +16,9 @@
   <h1>Astronaut Rescue: Remote Interface</h1>
 <p> An astronaut has been lost in space and we need you to retrieve her. Use the space ship to navigate
 	the astroid fields, pick up the astronaut, and bring her to the safe zone. To control the spaceship
-	click the different buttons to add instructions to the queue. Once you press run the list of instructions
-	will run as you ordred it. </p>
+	click the different buttons to add instructions to the queue. Use the delete button to remove the last instruction.
+	Once you press run the list of instructions will run as you ordred it. </p>
+	<br>
 	<button cloud_action='update' cloud_name='command'>Forward</button>
   <button cloud_action='update' cloud_name='command'>Backward</button>
   <button cloud_action='update' cloud_name='command'>Left Turn</button>
@@ -28,6 +29,7 @@
 	<br>
 	<button cloud_action='update' cloud_name='command'>Run</button>
   <button cloud_action='update' cloud_name='command'>Delete</button>
+	<input type=text cloud_action='update' cloud_name='display_text' value='Enter Text' />
 	<hr>
 
 	<h2>My Project Quick Links:</h2>
