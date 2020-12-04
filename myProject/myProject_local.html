@@ -7,8 +7,8 @@
 	  <link rel="stylesheet" href="../src/style.css" />
 		<textarea id="cloud_code"># MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
 from spike import Speaker
-sound = Speaker()
-
+</textarea>
+<script>
 def forward():
 	sound.beep(note=60, seconds=0.4)
 def backward():
@@ -23,7 +23,8 @@ for instruction in queue:
 	if instruction == 'B':
 			backward()
 	if instruction == 'L':
-			leftTurn()</textarea>
+			leftTurn()
+</script>
 	</head>
 <body>
 
