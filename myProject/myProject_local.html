@@ -5,13 +5,25 @@
 	  <script src="../src/secret.js" charset="utf-8"></script>
 	  <script src="../src/cloud.js" charset="utf-8"></script>
 	  <link rel="stylesheet" href="../src/style.css" />
-		<script>
-		function add (value) {
-		if (value == 'Foward')
-		{
-			document.getElementByID('').value += 'F';
-		}
-		}
+		<textarea id="cloud_code"># MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
+from spike import Speaker
+sound = Speaker()
+
+def forward():
+	sound.beep(note=60, seconds=0.4)
+def backward():
+	sound.beep(note=62, seconds=0.4)
+def leftTurn():
+	sound.beep(note=64, seconds=0.4)
+def
+queue = 'REPLACE[cloud_current]'
+for instruction in queue:
+	if instruction == 'F':
+			forward()
+	if instruction == 'B':
+			backward()
+	if instruction == 'L':
+			leftTurn()</textarea>
 	</head>
 <body>
 
