@@ -23,42 +23,44 @@
 		<b><em>Monitor Cloud:</em></b>
 
 		<div type="cloud_check" cloud_compare="changes" cloud_action="download_code">
-			<input type=text id="cloud_name" value="notes">
-			<input type=text id="cloud_action_val" value="0">
-			<textarea id="cloud_code"># MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
-from spike import Speaker
-hub = PrimeHub()
-wheels = MotorPair('C','D')
-lift = Motor('A')
-def forward():
-	wheels.move_tank(20, 'cm', 50, 50)
-def backward():
-	wheels.move_tank(-20, 'cm', 50, 50)
-def leftTurn():
-	wheels.move_tank(-180, 'degrees', -50, 50)
-def rightTurn():
-	wheels.move_tank(-180, 'degrees', 50, -50)
-def liftUp():
-	lift.run_to_degrees_counted(90, 50)
-	def liftDown():
-		lift.run_to_degrees_counted(-90, 50)
-queue = 'REPLACE[cloud_current]'
-for instruction in queue:
-	if instruction == 'F':
-			forward()
-	if instruction == 'B':
-			backward()
-	if instruction == 'L':
-			leftTurn()
-	if instruction == 'R':
-		  rightTurn()
-	if instruction == 'U':
-			liftUp()
-	if instruction == 'D':
-			liftDown()
 
-		</textarea>
-			<input type=text id="cloud_reset" value="">
+			<div type="cloud_check" cloud_compare="equal" cloud_action="download_code">
+				<input type=text id="cloud_name" value="command">
+				<input type=text id="cloud_value" value="Run">
+	      <input type=text id="cloud_action_val" value="0">
+				<textarea id="cloud_code"># MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
+	from spike import Speaker
+	hub = PrimeHub()
+	wheels = MotorPair('C','D')
+	lift = Motor('A')
+	def forward():
+		wheels.move_tank(20, 'cm', 50, 50)
+	def backward():
+		wheels.move_tank(-20, 'cm', 50, 50)
+	def leftTurn():
+		wheels.move_tank(-180, 'degrees', -50, 50)
+	def rightTurn():
+		wheels.move_tank(-180, 'degrees', 50, -50)
+	def liftUp():
+		lift.run_to_degrees_counted(90, 50)
+		def liftDown():
+			lift.run_to_degrees_counted(-90, 50)
+	queue = 'REPLACE[cloud_current]'
+	for instruction in queue:
+		if instruction == 'F':
+				forward()
+		if instruction == 'B':
+				backward()
+		if instruction == 'L':
+				leftTurn()
+		if instruction == 'R':
+			  rightTurn()
+		if instruction == 'U':
+				liftUp()
+		if instruction == 'D':
+				liftDown()
+			</textarea>
+
 		</div>
 
 	<h2>My Project Quick Links:</h2>
