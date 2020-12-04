@@ -26,7 +26,9 @@
 				<input type=text id="cloud_value" value="Run">
 	      <input type=text id="cloud_action_val" value="0">
 				<textarea id="cloud_code"># MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
-	from spike import Speaker
+from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
+from spike.control import wait_for_seconds, wait_until, Timer
+
 	hub = PrimeHub()
 	wheels = MotorPair('C','D')
 	lift = Motor('A')
