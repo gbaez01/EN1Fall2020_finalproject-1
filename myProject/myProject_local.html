@@ -29,36 +29,36 @@
 from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
 from spike.control import wait_for_seconds, wait_until, Timer
 
-	hub = PrimeHub()
-	wheels = MotorPair('C','D')
-	lift = Motor('A')
-	def forward():
-		wheels.move_tank(20, 'cm', 50, 50)
-	def backward():
-		wheels.move_tank(-20, 'cm', 50, 50)
-	def leftTurn():
-		wheels.move_tank(-180, 'degrees', -50, 50)
-	def rightTurn():
-		wheels.move_tank(-180, 'degrees', 50, -50)
-	def liftUp():
-		lift.run_to_degrees_counted(90, 50)
-		def liftDown():
-			lift.run_to_degrees_counted(-90, 50)
-	queue = 'REPLACE[cloud_current]'
-	for instruction in queue:
-		if instruction == 'F':
-				forward()
-		if instruction == 'B':
-				backward()
-		if instruction == 'L':
-				leftTurn()
-		if instruction == 'R':
-			  rightTurn()
-		if instruction == 'U':
-				liftUp()
-		if instruction == 'D':
-				liftDown()
-			</textarea>
+hub = PrimeHub()
+wheels = MotorPair('C','D')
+lift = Motor('A')
+def forward():
+	wheels.move_tank(20, 'cm', 50, 50)
+def backward():
+	wheels.move_tank(-20, 'cm', 50, 50)
+def leftTurn():
+	wheels.move_tank(-180, 'degrees', -50, 50)
+def rightTurn():
+	wheels.move_tank(-180, 'degrees', 50, -50)
+def liftUp():
+	lift.run_to_degrees_counted(90, 50)
+def liftDown():
+	lift.run_to_degrees_counted(-90, 50)
+queue = 'REPLACE[cloud_current]'
+for instruction in queue:
+	if instruction == 'F':
+		forward()
+	if instruction == 'B':
+		backward()
+	if instruction == 'L':
+		leftTurn()
+	if instruction == 'R':
+	  rightTurn()
+	if instruction == 'U':
+		liftUp()
+	if instruction == 'D':
+		liftDown()
+	</textarea>
 			<input type=text id="cloud_reset" value="">
 		</div>
 
