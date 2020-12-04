@@ -5,26 +5,6 @@
 	  <script src="../src/secret.js" charset="utf-8"></script>
 	  <script src="../src/cloud.js" charset="utf-8"></script>
 	  <link rel="stylesheet" href="../src/style.css" />
-		<textarea id="cloud_code"># MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
-from spike import Speaker
-</textarea>
-<script>
-def forward():
-	sound.beep(note=60, seconds=0.4)
-def backward():
-	sound.beep(note=62, seconds=0.4)
-def leftTurn():
-	sound.beep(note=64, seconds=0.4)
-def
-queue = 'REPLACE[cloud_current]'
-for instruction in queue:
-	if instruction == 'F':
-			forward()
-	if instruction == 'B':
-			backward()
-	if instruction == 'L':
-			leftTurn()
-</script>
 	</head>
 <body>
 
@@ -35,8 +15,26 @@ for instruction in queue:
 	</div>
 
 	<h1>My Project (Local Interface)</h1>
-
+	<textarea id="cloud_code"># MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
+	</textarea>
 	<!-- CREATE YOUR PROJECT HERE -->
+	<script>
+	def forward():
+		sound.beep(note=60, seconds=0.4)
+	def backward():
+		sound.beep(note=62, seconds=0.4)
+	def leftTurn():
+		sound.beep(note=64, seconds=0.4)
+	def
+	queue = 'REPLACE[cloud_current]'
+	for instruction in queue:
+		if instruction == 'F':
+				forward()
+		if instruction == 'B':
+				backward()
+		if instruction == 'L':
+				leftTurn()
+	</script>
 
 	<hr>
 
