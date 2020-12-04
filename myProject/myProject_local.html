@@ -34,6 +34,33 @@
 		if instruction == 'L':
 				leftTurn()
 	<hr>
+	<div class="cloud_check">
+		<b><em>Monitor Cloud:</em></b>
+
+		<div type="cloud_check" cloud_compare="changes" cloud_action="download_code">
+			<input type=text id="cloud_name" value="notes">
+			<input type=text id="cloud_action_val" value="0">
+			<textarea id="cloud_code"># MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
+from spike import Speaker
+sound = Speaker()
+
+def play_C():
+		sound.beep(note=60, seconds=0.4)
+def play_D():
+		sound.beep(note=62, seconds=0.4)
+def play_E():
+		sound.beep(note=64, seconds=0.4)
+
+note_sequence = 'REPLACE[cloud_current]'
+for note in note_sequence:
+		if note == 'C':
+				play_C()
+		if note == 'D':
+				play_D()
+		if note == 'E':
+				play_E()</textarea>
+			<input type=text id="cloud_reset" value="">
+		</div>
 
 	<h2>My Project Quick Links:</h2>
   <p>
