@@ -34,22 +34,16 @@ wheels = MotorPair('C','D')
 lift = Motor('A')
 def forward():
 	wheels.move_tank(-20, 'cm', 50, 50)
-	yield(20)
 def backward():
 	wheels.move_tank(20, 'cm', 50, 50)
-	yield(20)
 def leftTurn():
 	wheels.move_tank(180, 'degrees', -50, 50)
-	yield(20)
 def rightTurn():
 	wheels.move_tank(180, 'degrees', 50, -50)
-	yield(20)
 def liftUp():
 	lift.run_to_position(170, 'shortest path',50)
-	yield(20)
 def liftDown():
 	lift.run_to_position(270, 'shortest path', 50)
-	yield(20)
 queue = 'CLOUD[display_text]'
 
 
