@@ -51,18 +51,18 @@ def liftDown():
 	lift.run_to_position(270, 'shortest path', 50)
 	yield(20)
 queue = 'REPLACE[cloud_current]'
-for instruction in queue:
-	if instruction == 'F':
+for character in queue:
+	if character == 'F':
 		forward()
-	if instruction == 'B':
+	if character == 'B':
 		backward()
-	if instruction == 'L':
+	if character == 'L':
 		leftTurn()
-	if instruction == 'R':
+	if character == 'R':
 	  rightTurn()
-	if instruction == 'U':
+	if character == 'U':
 		liftUp()
-	if instruction == 'D':
+	if character == 'D':
 		liftDown()
 	</textarea>
 		</div>
