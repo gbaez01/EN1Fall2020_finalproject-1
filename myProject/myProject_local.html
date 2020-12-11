@@ -33,13 +33,13 @@ hub = PrimeHub()
 wheels = MotorPair('C','D')
 lift = Motor('A')
 def forward():
-	wheels.move_tank(-20, 'cm', 50, 50)
+	wheels.move_tank(-20, 'cm', 25, 25)
 def backward():
-	wheels.move_tank(20, 'cm', 50, 50)
+	wheels.move_tank(20, 'cm', 25, 25)
 def leftTurn():
-	wheels.move_tank(190, 'degrees', -50, 50)
+	wheels.move_tank(185, 'degrees', -50, 50)
 def rightTurn():
-	wheels.move_tank(190, 'degrees', 50, -50)
+	wheels.move_tank(185, 'degrees', 50, -50)
 def liftUp():
 	lift.run_to_position(170, 'shortest path',50)
 def liftDown():
